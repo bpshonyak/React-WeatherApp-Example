@@ -19,10 +19,16 @@ export default class SearchBar extends Component {
     });
   }
 
+  onFormSubmit(event) {
+    event.preventDefault();
+
+    // Fetch weather data
+  }
+
   render() {
     return (
       <div>
-        <from className="input-group">
+        <from onSubmit={this.onFormSubmit} className="input-group">
           <input vlaue
             placeholder="Auburn, WA"
             className="form-control"
